@@ -1,6 +1,6 @@
 # IT CBE Club Website
 
-Welcome to the **IT CBE Club Website** repository! This repository contains the source code and assets for the official website of the IT Club at the College of Business and Economics (CBE). The website serves as a platform to share information, events, and resources with members and visitors.
+Welcome to the **IT CBE Club Website** repository! This repository contains the source code and assets for the official website of the IT Club at the College of Business and Education (CBE). The website serves as a platform to share information, events, and resources with members and visitors.
 
 ## 🌐 About the Website
 
