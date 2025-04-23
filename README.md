@@ -22,12 +22,12 @@ The website is developed using the following technologies:
 
 Below is the structure of the repository:
 it-cbe-club-project/
-├── css/                # Stylesheets
-├── js/                 # JavaScript files
-├── php/                # Backend PHP scripts
-├── img/                # Images and assets
-├── index.html          # Main HTML file
-└── README.md           # Project overview
+├── css/           # Stylesheets for the frontend
+├── js/            # JavaScript files for interactivity
+├── php/           # Backend PHP scripts
+├── img/           # Images and media assets
+├── index.html     # Main HTML entry point
+└── README.md      # Project overview and documentation
 
 ## 🚀 Features
 
