@@ -56,7 +56,68 @@ This project leverages:
 
 ---
 
+## Setup Instructions
+Follow these steps to set up the project on your local machine:
+
+Prerequisites:
+Install a local server environment like XAMPP, WAMP, or MAMP.
+Ensure you have PHP and MySQL installed on your system.
+Install a modern web browser like Chrome or Firefox.
+Steps to Set Up:
+Clone the Repository
+Use the following command to clone the repository to your local machine:
+
+bash
+
+git clone https://github.com/hassanayn/it-cbe-club-project.git
+Set Up the Database
+
+Open phpMyAdmin or your preferred MySQL tool.
+Create a new database (e.g., it_club).
+Import the schema.sql file from the database/ directory to set up the required tables.
+
+
+ Configure Database Connection
+
+Open the db.php file in the backend/ directory.
+Update the database credentials:
+PHP
+<?php
+$host = "localhost";      // Database host
+$user = "root";           // Database username
+$password = "";           // Database password
+$database = "it_club";    // Database name
+?>
+Run the Project
+
+Move the project files to your local server's root directory (e.g., htdocs in XAMPP).
+Start your local server and navigate to http://localhost/it-cbe-club-project in your browser.
+## Contributing
+We welcome contributions to this project! Here's how you can help:
+
+Fork the repository.
+Create a new branch for your feature or bug fix:
+bash
+git checkout -b feature-name
+Commit your changes:
+bash
+git commit -m "Add feature-name"
+Push the branch to your forked repository:
+bash
+git push origin feature-name
+Open a Pull Request to this repository.
+## License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute this project as per the license terms.
+
+## Contact
+For any questions or suggestions, please reach out to:
+
+Repository Owner: hassanayn
+Email: hassa9kashmal@gmail.com
+
+
 ## Project Structure
+
 
 The project is organized as follows:
 
@@ -94,59 +155,7 @@ it-cbe-club-project/
 ├── .gitignore             # Git ignore file
 └── LICENSE                # License file
 
+---
 
-Setup Instructions
-Follow these steps to set up the project on your local machine:
 
-Prerequisites:
-Install a local server environment like XAMPP, WAMP, or MAMP.
-Ensure you have PHP and MySQL installed on your system.
-Install a modern web browser like Chrome or Firefox.
-Steps to Set Up:
-Clone the Repository
-Use the following command to clone the repository to your local machine:
 
-bash
-git clone https://github.com/hassanayn/it-cbe-club-project.git
-Set Up the Database
-
-Open phpMyAdmin or your preferred MySQL tool.
-Create a new database (e.g., it_club).
-Import the schema.sql file from the database/ directory to set up the required tables.
-Configure Database Connection
-
-Open the db.php file in the backend/ directory.
-Update the database credentials:
-PHP
-<?php
-$host = "localhost";      // Database host
-$user = "root";           // Database username
-$password = "";           // Database password
-$database = "it_club";    // Database name
-?>
-Run the Project
-
-Move the project files to your local server's root directory (e.g., htdocs in XAMPP).
-Start your local server and navigate to http://localhost/it-cbe-club-project in your browser.
-Contributing
-We welcome contributions to this project! Here's how you can help:
-
-Fork the repository.
-Create a new branch for your feature or bug fix:
-bash
-git checkout -b feature-name
-Commit your changes:
-bash
-git commit -m "Add feature-name"
-Push the branch to your forked repository:
-bash
-git push origin feature-name
-Open a Pull Request to this repository.
-License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this project as per the license terms.
-
-Contact
-For any questions or suggestions, please reach out to:
-
-Repository Owner: hassanayn
-Email: hassa9kashmal@gmail.com
