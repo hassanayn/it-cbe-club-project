@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ICT Club Registration</title>
+        <style>
+            /* CSS: Styling the Page */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                background-color: #f7f7f7;
+            }
+        
+        
+            .navbar {
+            background-color: #007bff;
+            padding: 15px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+     
+        
+            .navbar-links .nav-link {
+                color: white;
+                font-size: 16px;
+                padding: 5px 10px; /* Adjust padding for links */
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+        
+            .navbar-links .nav-link:hover {
+                background-color: #0056b3;
+                border-radius: 5px;
+            }
+        
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: calc(100vh - 40px); /* Adjust based on new navbar height */
+            }
+        
+            .form-container {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+            }
+        
+            .form-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        
+            .form-container input,
+            .form-container select,
+            .form-container button {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        
+            .form-container button {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+        
+            .form-container button:hover {
+                background-color: #218838;
+                transform: translateY(-2px);
+            }
+        
+            p {
+                text-align: center;
+            }
+        
+            #message {
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" height="40px" href="index.html">ICT
+                    Club</a>
+                <div class="navbar-links">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Registration Form -->
+        <div class="container">
+            <div class="form-container">
+                <h2>Register as an ICT Club Member</h2>
+                <form id="registerForm">
+                    <input type="text" id="name" placeholder="Enter your name"
+                        required />
+                    <input type="email" id="email"
+                        placeholder="Enter your email" required />
+                    <input type="password" id="password"
+                        placeholder="Enter your password" required />
+                    <select id="specialization" required>
+                        <option value disabled selected>Select your
+                            specialization</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Graphic designing">Graphics
+                            designing</option>
+                        <option value="Maintainance"> Maintainance</option>
+
+                    </select>
+                    <input type="checkbox" id="terms" required />
+                    <p>READ <a href="register.html">Terms
+                            conditions</a></p>
+                    <button type="submit">Register</button>
+                    <p>Already have an account? <a href="login.html">Sign in
+                            here</a></p>
+                </form>
+                <p id="message"></p>
+            </div>
+        </div>
+
+        <!-- JavaScript for Validation -->
+        <script>
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Input values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const specialization = document.getElementById('specialization').value;
+            const terms = document.getElementById('terms').checked;
+
+            // Validation
+            if (!name) {
+                showMessage('Name is required.');
+                return;
+            }
+
+            if (!email || !validateEmail(email)) {
+                showMessage('Enter a valid email.');
+                return;
+            }
+
+            if (!password || password.length < 8) {
+                showMessage('Password must be at least 8 characters long.');
+                return;
+            }
+
+            if (!specialization) {
+                showMessage('Please select your specialization.');
+                return;
+            }
+
+            if (!terms) {
+                showMessage('You must agree to the club guidelines.');
+                return;
+            }
+
+            // Show success message (Example: You can connect this with your backend)
+            showMessage('Registration successful!', true);
+        });
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function showMessage(message, isSuccess = false) {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = message;
+            messageElement.style.color = isSuccess ? 'green' : 'red';
+        }
+    </script>
+    </body>
+
+</html>
