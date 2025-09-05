@@ -1,8 +1,8 @@
 
 
-# IT Club Website Project
+# CBE IT Club Website Project
 
-Welcome to the **IT Club Website Project** repository! This project is designed to create a dynamic and interactive website for the IT Club. It serves as a platform to showcase club activities, events, and member information, providing a seamless experience for users.
+Welcome to the **CBE IT Club Website Project** repository! This project is designed to create a dynamic and interactive website for the IT Club. It serves as a platform to showcase club activities, events, and member information, providing a seamless experience for users.
 
 ---
 
